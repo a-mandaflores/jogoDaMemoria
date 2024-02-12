@@ -1,4 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 body{
     background-color: rgb(232, 232, 232);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -13,23 +20,46 @@ h1{
 }
 
 
-
 .container{
-    background-color: white;
-    box-shadow: 1px 1px 10px rgb(0, 0, 0, .3);
-    border-radius: 5px;
-    width: 400px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.boxContainer{
+    background-color: white;
+    box-shadow: 1px 1px 10px rgb(0, 0, 0, .3);
+    border-radius: 5px;
+    width: 400px;
+    
+}
 .box{
-    cursor: pointer;
-    /* box-shadow: 1px 1px 10px rgb(0,0,0,.2); */
+    
     display: inline-block;
     margin: .5rem;
     width: 80px;
     height: 80px;
     border-radius: 5px;
+
+}
+
+h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+    position: relative;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+}
+
+.underline{
+    margin-bottom: 1rem;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #35354f;
+    width: 100px;
+    height: 1px;
 }

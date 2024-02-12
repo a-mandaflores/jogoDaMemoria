@@ -10,6 +10,8 @@ function App() {
 
 
   function clicado(id){
+
+  
     setClicks(prevClick => prevClick + 1)
     
 
@@ -36,6 +38,7 @@ function App() {
       if(clicks === 1){
         if(color[boxIdOne].id == color[id].id){
           setColor(prevColor => {
+            console.log(color[id].id)
             return prevColor.map(box => {
               return box.id == id ? {...box, on: false}: box;
             })
@@ -46,6 +49,8 @@ function App() {
         setTimeout(()=>{
           if(color[boxIdOne].color !== color[id].color){
             setColor(prevColor => {
+              console.log(color[boxIdOne].color)
+              console.log(color[id].color)
               return prevColor.map((box) => {
                 if(box.id === boxIdOne || box.id === id){
                   return {...box, on: false};
@@ -60,6 +65,7 @@ function App() {
           }else{
             setColor(prevColor => {
               return prevColor.map(box =>{
+                console.log("to entrando aqui")
                 if(box.id == id || box.id == boxIdOne){
                   return {...box, find: true} 
                 }
@@ -74,9 +80,8 @@ function App() {
         
       }
       
-      
-      console.log(color[boxIdOne].color)
-      console.log(color[id].color)
+    
+
   }
     
     
@@ -94,9 +99,12 @@ function App() {
   
   return (
     <>      
-    <h1>Memorise Game</h1>
     <div className='container'>
+    <h1>Jogo da Memoria</h1>
+    <div className='underline'></div>
+      <div className='boxContainer'>
       {boxAll}
+      </div>
     </div>
     </>
 
